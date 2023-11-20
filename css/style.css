@@ -1,0 +1,396 @@
+:root {
+    --main-color: #333333;
+    --color-hero: white;
+    --btn-color: #FF9900;
+    --btn-size: 16px;
+    --footer-color: #cacaca;
+    --input-bck: #414141;
+    --btn-hover: #E1670E;
+}
+
+@font-face {
+    font-family: "Golos";  
+    src: url("../fonts/GolosText-Bold.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Golos";  
+    src: url("../fonts/GolosText-Regular.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal;
+}
+
+/*Дефолтные стили для проекта*/
+.container { /*Ширина контейнера, которая задана дизайнером*/
+    max-width: 1180px; /*Изначально ширина контейнера = 1170 пх, но паддинги скушали 30 пх, поэтому написали 1200 И ВСЕГДА ПРОВЕРЯЙ В ДЕВТУЛСЕ*/
+    margin-left: auto; /*МЛефт и МРайт Авто = чтобы страница была по центру*/
+    margin-right: auto;
+    padding-left: 15px;/*ПДЛ и ПДР 15пх, чтобы при сокращении экрана элементы не приклеивались в плотную*/
+    padding-right: 15px;
+}
+
+a { /*Чтобы ссылки не светились синим цветом*/
+    text-decoration: none;
+}
+
+a:focus {
+    outline: 1px solid #3172b9; /*при нажатии на Tab гость может посмотреть все ссылки на сайте*/
+}
+
+p {
+    margin: 0;
+}
+ul { /*Чтобы списки не имели лишних отступов, паддингов и не было их точек*/
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+* {
+    box-sizing: border-box; /*Чтобы паддинги не влияли на размер внешнего элемета*/
+}
+
+html { /*Задаем всему макету шрифт, чтобы соотв макету*/
+    /* font-family: 'Open Sans', sans-serif; */
+}
+
+.section__info {
+    margin-bottom: 64px;
+}
+
+.main__block__stickers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.block__descr__stickers {
+    width: 574px;
+    margin-top: 183px;
+}
+
+.block__img__stickers {
+    width: 467px;
+    margin-top: 56px;
+    height: 467px;
+    background: url('../img/background__img.png');
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main__img__stickers {
+    position: relative;
+    width: 320px;
+    height: 330px;
+}
+.main__block__name__stickers {
+font-family: Golos;
+font-size: 40px;
+font-weight: 700;
+line-height: 44px;
+letter-spacing: 0px;
+margin-bottom: 16px;
+}
+
+.main__block__descr__name__stickers {
+    font-family: Golos;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0px;
+}
+
+.main__img__stickers {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.list__block__stickers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+}
+
+.swiper-main {
+    overflow: hidden;
+}
+
+.swiper-text {
+    overflow: hidden;
+    height: 200px;
+}
+
+.strelka_active {
+    transform: rotate(-180deg);
+}
+
+
+.block__stickers__container {
+    padding: 16px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 16px;
+}
+
+.block__stickers__img {
+    width: 64px;
+    height: 64px;
+}
+
+.block__stickers__name {
+    font-family: Golos;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0px;
+}
+
+.block__stickers__container:nth-child(1) {
+    background-color: #E7ECF3;
+}
+
+.block__stickers__container:nth-child(2) {
+    background-color: #F2D7FF;
+}
+
+.block__stickers__container:nth-child(3) {
+    background-color: #C3FFC9;
+}
+
+.block__stickers__container:nth-child(4) {
+    background-color: #FFEDCC;
+}
+
+.block__stickers__container:nth-child(5) {
+    background-color: #FFE1E1;
+}
+
+.block__stickers__container:nth-child(6) {
+    background-color: #D9E8FB;
+}
+
+.block__stickers__container:nth-child(7) {
+    background-color: #FFE1F0;
+}
+
+.block__stickers__container:nth-child(8) {
+    background-color: #FFE1E1;
+}
+
+.block__stickers__container:nth-child(9) {
+    background-color: #C3FFF4;
+}
+
+.block__stickers__container:nth-child(10) {
+    background-color: #ffa600;
+}
+
+.block__open__img {
+    transition: transform .3s ease-in-out;
+}
+
+.block__open__text {
+    font-family: Golos;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0px;
+    margin-left: 16px;
+}
+
+.block__open__list__container {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+    margin-bottom: 56px;
+}
+
+.block__open__list__btn {
+    display: flex;
+    border: 0;
+    background: transparent;
+}
+
+.block__open__img:hover {
+    transform: rotate(-180deg);
+    transition: transform .5s ease-in-out;
+}
+
+.swiper-text .swiper-wrapper .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    border: 0px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.swiper-button-prev {
+    background: url(../img/prev.svg) no-repeat;
+    background-position: center;
+    background-size: 100%;
+    left: -22px;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+
+}
+
+.swiper-button-next {
+    background: url(../img/next.svg) no-repeat;
+    background-position: center;
+    background-size: 100%;
+    right: -22px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    display: none;
+} 
+
+/*Стилизация логики отображения Стикерсов*/
+.block__stickers__container:not(:nth-child(-n + 9)) {
+    display: none;
+}
+
+@media (max-width:1279px) {
+
+    .block__open__list__container {
+        margin-bottom: 20px;
+    }
+
+    .block__stickers__container:not(:nth-child(-n + 6)) {
+        display: none;
+    }
+
+    .list__block__stickers {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .container { /*Ширина контейнера, которая задана дизайнером*/
+        max-width: 768px; 
+        margin-left: auto; 
+        margin-right: auto;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .main__block__stickers {
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .block__img__stickers {
+        width: 100%;
+        margin-top: 64.5px;
+        background: url(../img/background__img.png) no-repeat center;
+        justify-content: space-between;
+    }
+
+    .swiper-button-prev {
+        left: 0px;
+    }
+
+    .swiper-button-next {
+        right: 0px;
+    }
+
+    .block__descr__stickers {
+        margin-top: -30px;
+        width: 100%;
+    }
+
+    .main__block__name__stickers {
+        text-align: center;
+    }
+
+    .main__block__descr__name__stickers  {
+        text-align: center;
+        padding: 0px 40px;
+    }
+    .block__stickers__container:not(:last-child) {
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width:767px) {
+
+    .swiper-button-prev {
+        left: -25px;
+        background-size: 100%;
+    }
+
+    .swiper-button-next {
+        right: -25px;
+        background-size: 100%;
+    }
+
+    .block__stickers__container:not(:nth-child(-n + 6)) {
+        display: none;
+    }
+
+    .list__block__stickers {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .block__stickers__container:not(:last-child) {
+        margin-bottom: 8px;
+    }
+
+    .block__img__stickers {
+        background-size: 272px;
+    }
+
+    .main__img__stickers {
+        width: 160px;
+        height: 160px;
+    }
+
+    .main__block__name__stickers {
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 12px;
+    }
+
+    .main__block__descr__name__stickers {
+        font-family: Golos;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+        padding: 0;
+    }
+    
+    .block__img__stickers {
+        height: 280px;
+    }
+
+    .block__descr__stickers {
+        margin-top: -20px;
+    }
+
+    .container {
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
